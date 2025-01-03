@@ -1,0 +1,223 @@
+body{
+    background-color: #FDF6F6;
+}
+.container{
+    border:1px solid black;
+    margin: 50px;
+    min-height: 50px;
+    max-height: 100%;
+    background-color: #acacac;
+}
+.header{
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #2A3132;
+    color:#90AFC5;
+    align-items: center;
+}
+.header button{
+    width: 30px;
+    height: 30px;
+    border-radius: 45%;
+    border: #acacac;
+    font-weight: 900;
+    font-size: 20px;
+}
+.popup{
+    width:300px;
+    position: absolute;
+    padding: auto;
+    min-height: 370px;
+    top:100px;
+    left:500px
+    /* margin-left: 35%; */
+    /* margin-top: -10%; */
+   /* border:2px solid green; */
+}
+.innerpopup{
+    background-color: white;
+    min-height: 370px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #90AFC5;
+    border-radius: 20px;
+    color:#011417 ;
+    margin-bottom: 5px;
+    position: fixed;
+
+}
+.innerpopup label{
+    font-size: 20px;
+    font-weight: 600;
+}
+.innerpopup input{
+    border-radius: 5px;
+    border: 1px solid #90AFC5;
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+.innerpopup input:focus{
+    border: 1px solid #011417;
+}
+.hide{
+    display: none;
+}
+#imageInput{
+    margin-left: 80px;
+    padding-top: 2px;
+    border: none;
+}
+.innerpopup input[type='file']::-webkit-file-upload-button{
+    color: #90AFC5;
+    border: none;
+    border-radius: 20px;
+    background-color: #011417;
+    padding: 3px 5px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 27px;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    padding-top: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .slider {
+    background-color: #2A3132;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px #2A3132;
+}
+  
+input:checked + .slider:before {
+    
+    transform: translateX(26px);
+}
+.slider.round {
+    border-radius: 34px;
+  }
+  
+.slider.round:before {
+    border-radius: 50%;
+}      
+#in{
+    margin-left: -22px;
+    font-size: 20px;
+}
+#out{
+    padding-left: 95px;
+    margin-top: -25px;
+    font-size: 20px;
+}
+
+.submit button{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    padding-left:70px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 70px;
+    align-items: center;
+    color: #90AFC5;
+    background-color: #011417;
+    font-weight: 700;
+}
+/* error display */
+
+.error1,.error2,.error3,.error4{
+    font-size: 10px;
+    margin-left: -130px;
+    color: rgb(235, 21, 21);
+    letter-spacing: 1px;
+}
+.str1,.str2{
+    font-size: 10px;
+    margin-left: -90px;
+    padding-top: 1px;
+    color: rgb(235, 21, 21);
+}
+.str3{
+    font-size: 10px;
+    margin-left: -80px;
+    padding-top: 1px;
+    padding-bottom: 3px;
+    color: rgb(235, 21, 21);
+}
+#show{   
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    row-gap: 15px;
+    border: 2px solid black;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.kl{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #2A3132;
+    border:1px solid  #011417;
+    min-width: 270px;
+    padding-left: 10px;
+    font-size: 15px;
+    line-height: 0%;
+    border-radius: 20px;
+    color: #acacac;
+    padding-bottom: 10px;
+}
+.kl h4{
+    padding-left: 10px;
+}
+.kl img{
+    height: 170px;
+    margin-left: 25px;
+    width:200px;
+    border:1px solid white;
+    margin-top: 15px;
+}
+.kl button{
+   width: 250px;
+   margin-bottom: 5px;
+   background-color: #90AFC5;
+   border-radius: 5px;
+   border: none;
+   font-weight: 700;
+   color:#011417;
+}

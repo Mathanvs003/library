@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="lib.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header" >
+            <h1>Library</h1>
+            <button onclick="openpopup()">+</button>
+        </div>
+        <div class="body">
+            <div id="show"></div>
+
+        </div>
+    </div>
+
+    <div class="popup hide">
+        <form class="innerpopup" id="form">
+                <h1>Add Book</h1>
+                <label for="title">Book Name</label>
+                <input type="text" id="title" onchange="validates1()">
+                <div class="error1" hidden>required</div>
+                <div class="str1" hidden>Don't use the values</div>
+
+                <label for="name">Author Name</label>
+                <input type="text" id="name" onchange="validates2()">
+                <div class="error2" hidden>required</div>
+                <div class="str2" hidden>Don't use the values</div>
+
+                <label for="page">Pages</label>
+                <input type="text" id="page" onchange="validates3()">
+                <div class="error3" hidden>required</div>
+                <div class="str3" hidden>Don't use the Charaters</div>
+
+
+                <input type="file" id="imageInput" accept="image/*" >
+
+                <label class="switch" >
+                    <lable id="in">In</lable>
+                    <input type="checkbox" id="check" >
+                    <span class="slider round"></span>
+                </label>
+                <label id="out">Out</label>
+                <div class="submit">
+                    <button>Submit</button>
+               </div>
+            </form>
+    </div>
+</body>
+</html>
