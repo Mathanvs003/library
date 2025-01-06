@@ -221,3 +221,23 @@ input:checked + .slider:before {
    font-weight: 700;
    color:#011417;
 }
+.inn{
+    padding-left: 30px;
+}
+.switchh input{
+    margin-top: 20px;
+}
+.switchh span{
+    margin-left: 40px;
+    padding-left: 55px;
+}
+.outt{
+   width: 10px;
+   margin-left: -45px;
+}
+.switchh input:checked + .slider {
+    background-color: #90AFC5;
+}
+.switchh input:focus + .slider {
+    box-shadow: 0 0 1px #2A3132;
+}
