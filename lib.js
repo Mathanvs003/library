@@ -14,6 +14,8 @@ function openpopup() {
   const page = document.getElementById('page');
   const check = document.getElementById("check");
   let img = '';
+
+  
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     
@@ -38,11 +40,13 @@ function openpopup() {
     const library = JSON.parse(localStorage.getItem('kkk')) || [];
    
     library.push(libraryObject);
-   
+   if(libraryObject.book.length!==0 && libraryObject.authname.length!==0 && libraryObject.page.length!==0){
     localStorage.setItem("kkk", JSON.stringify(library));
+   }
 
     renderLibrary()
-   
+    document.getElementById("form").reset();
+
   });
    
   function renderLibrary() {
@@ -57,7 +61,13 @@ function openpopup() {
           <h4>Book Name: ${e.book}</h4>
           <h4>Author Name: ${e.authname}</h4>
           <h4>Pages: ${e.page}</h4>
-          <h4>Status: ${e.check}</h4>
+          <h4>Status:<label class="switch switchh" >
+          <lable id="in" class="inn">In</lable>
+          <input type="checkbox" id="check" >
+          <span class="slider round"></span>
+          </label>
+          <label id="out" class="outt">Out</label>
+          </h4>
           <button class="delete-btn" data-index="${i}">Delete</button>
         </div>
       `);
@@ -108,6 +118,7 @@ function openpopup() {
       if (!book.value.match(letters)) {
         document.querySelector(".str1").style.display = "block";
         document.querySelector('.error1').style.display = 'none';
+        return false;
       } else {
         document.querySelector(".str1").style.display = "none";
         document.querySelector('.error1').style.display = 'none';
@@ -124,6 +135,7 @@ function openpopup() {
       if (!authname.value.match(letters)) {
         document.querySelector(".str2").style.display = "block";
         document.querySelector('.error2').style.display = 'none';
+        return false;
       } else {
         document.querySelector(".str2").style.display = "none";
         document.querySelector('.error2').style.display = 'none';
@@ -140,6 +152,7 @@ function openpopup() {
       if (isNaN(page.value)) {
         document.querySelector(".str3").style.display = "block";
         document.querySelector('.error3').style.display = 'none';
+        return false;
       } else {
         document.querySelector(".str3").style.display = "none";
         document.querySelector('.error3').style.display = 'none';
@@ -148,11 +161,12 @@ function openpopup() {
       }
     }
     if(count==3){
+      count=0;
         document.querySelector(".submit").addEventListener("click", hide);
-        renderLibrary();
     }
     else
         console.log("nope  "+count)
   }
    
-   renderLibrary();
+renderLibrary()
+   
